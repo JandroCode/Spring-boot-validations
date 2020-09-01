@@ -1,7 +1,8 @@
 # Spring-boot-validations
 Como implementar validaciones spring boot + thymeleaf
 
-Para la implementación de validaciones con spring boot y thymeleaf es necesario tener la dependencia de javax.validation en el POM.XML y
+Para la implementación de validaciones con spring boot y thymeleaf es necesario tener la dependencia de javax.validation en el POM.XML (en versiones
+anteriores de spring boot ya estaba incluída) y
 añadir las anotaciones pertientes en la clase de la entidad. Además, es necesario incluir en el controlador una objeto de tipo BindingResult.
 
 Para los mensajes que sean lanzados en las vistas con thymeleaf es necesario incluir en alguna etiqueta html el código necesario
