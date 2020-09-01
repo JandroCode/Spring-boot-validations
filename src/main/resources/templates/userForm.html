@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+		
+			<h4>Agregar usuario</h4>
+			
+			<div th:if="${unique != null}" th:text="${unique}"></div>
+			
+			<form th:action="@{/save}" th:object="${usuario}" method="post">
+				<input type="text" th:field="*{nombre}" />
+				<small th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+				
+				<input type="date" th:field="*{fechaCreacion}" />
+				<small th:if="${#fields.hasErrors('fechaCreacion')}" th:errors="*{fechaCreacion}"></small>
+				
+				
+				<button type="submit">Guardar</button>
+				
+ 			</form>
+
+</body>
+</html>
